@@ -1,11 +1,12 @@
 package librarysystem;
 public class Librarian extends User {
+    //constructor
     public Librarian(String name, int userId) {
         super(name, userId);
     }
 
     @Override
-    public void borrowBook(Library library, Book book) throws BookNotAvailableException {
+    public void borrowBook(Library library, Book book) throws BookIsUnavaliable {
         System.out.println("Librarian " + name + " borrowed the book: " + book.getTitle());
     }
 

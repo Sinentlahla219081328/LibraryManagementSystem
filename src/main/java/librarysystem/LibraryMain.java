@@ -8,16 +8,14 @@ public class LibraryMain {
         Librarian librarian = new Librarian("Alice", 1);
         Scanner scanner = new Scanner(System.in);
 
-        // Create members
         Member member1 = new Member("Sinentlahla", 1);
         Member member2 = new Member("John Doe", 2);
         Member member3 = new Member("Jane Smith", 3);
-        Member selectedMember = null; // Declare selectedMember here
+        Member selectedMember = null;
 
         // Welcome message
         System.out.println("Welcome to the Library Management System!");
 
-        // Prepopulate the library with some books
         librarian.addBook(library, new Book("To Kill a Mockingbird", "Harper Lee", "978-0-06-112008-4"));
         librarian.addBook(library, new Book("1984", "George Orwell", "978-0-452-28423-4"));
         librarian.addBook(library, new Book("Pride and Prejudice", "Jane Austen", "978-0-19-953556-9"));
@@ -66,14 +64,14 @@ public class LibraryMain {
                             break;
                         default:
                             System.out.println("Invalid member selection.");
-                            continue; // Skip to the next iteration of the loop
+                            continue;
                     }
                     System.out.println("Selected member: " + selectedMember.getName());
                     break;
                 case 3:
                     if (selectedMember == null) {
                         System.out.println("No member selected. Please select a member first.");
-                        break; // Exit the case if no member is selected
+                        break;
                     }
 
                     // Display available books before borrowing
@@ -89,7 +87,7 @@ public class LibraryMain {
                         try {
                             selectedMember.borrowBook(library, bookToBorrow);
                             System.out.println("You have successfully borrowed: " + bookToBorrow.getTitle());
-                        } catch (BookNotAvailableException e) {
+                        } catch (BookIsUnavaliable e) {
                             System.out.println(e.getMessage());
                         }
                     } else {
@@ -99,7 +97,7 @@ public class LibraryMain {
                 case 4:
                     if (selectedMember == null) {
                         System.out.println("No member selected. Please select a member first.");
-                        break; // Exit the case if no member is selected
+                        break;
                     }
                     System.out.print("Enter book title to return: ");
                     String returnTitle = scanner.nextLine().trim();

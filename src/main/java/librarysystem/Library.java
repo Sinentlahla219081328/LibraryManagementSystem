@@ -37,14 +37,6 @@ public class Library {
         return null;
     }
 
-
-
-   /* public Book findBookByTitle(String title) {
-        return books.stream()
-                .filter(book -> book.getTitle().equalsIgnoreCase(title))
-                .findFirst()
-                .orElse(null);
-    }*/
    public Book findBookByTitle(String title) {
        for (Book book : books) {
            if (book.getTitle().equalsIgnoreCase(title)) {

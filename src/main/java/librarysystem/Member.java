@@ -1,5 +1,7 @@
 package librarysystem;
 public class Member extends User {
+
+   //constructor
     public Member(String name, int userId) {
         super(name, userId);
     }
@@ -10,12 +12,12 @@ public class Member extends User {
     }
 
     @Override
-    public void borrowBook(Library library, Book book) throws BookNotAvailableException {
+    public void borrowBook(Library library, Book book) throws BookIsUnavaliable {
         if (book.isAvailable()) {
             book.setAvailable(false);
             System.out.println("Member " + name + " borrowed the book: " + book.getTitle());
         } else {
-            throw new BookNotAvailableException("Book " + book.getTitle() + " is currently not available.");
+            throw new BookIsUnavaliable("Book " + book.getTitle() + " is currently not available.");
         }
     }
 
