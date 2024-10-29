@@ -35,7 +35,7 @@ The application consists of the following main classes:
 
 6. **BookIsUnavailable**  
    A custom exception thrown when a member attempts to borrow a book that is not available.
-   When a librarian atteps to add a book that is already added in the library.
+   When a librarian attempts to add a book that is already added in the library.
 
 ## How to Run the Application
 
