@@ -51,6 +51,5 @@ The application consists of the following main classes:
    - Locate the `LibraryMain` class in the project.
    - Right-click on `LibraryMain` and select the **Run** option to start the application.
 
----
 
-This README provides clear instructions for setting up and running the project. Enjoy managing your library!
+
